@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'org.dolosplus.example.material'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+    maven {
+        url  "https://jcenter.bintray.com"
+    }
+}
+
+javafx {
+    version = "15.0.1"
+    modules = [ 'javafx.controls','javafx.fxml','javafx.swing' ]
+}
+
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation 'de.jensd:fontawesomefx-commons:11.0'
+    compile group: 'com.jfoenix', name: 'jfoenix', version: '9.0.10'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+mainClassName = 'org.dolosplus.example.material.MainLauncher'

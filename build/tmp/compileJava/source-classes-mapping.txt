@@ -1,0 +1,2 @@
+org/dolosplus/example/material/MainLauncher.java
+ org.dolosplus.example.material.MainLauncher
